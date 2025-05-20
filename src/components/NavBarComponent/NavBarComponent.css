@@ -283,4 +283,18 @@ nav.openMenu {
         color: var(--blue01);
         border: 1.5px solid var(--blue01);
     }
+
+    ul:hover .navItem a {
+        transform: none;
+        opacity: 1;
+        filter: none;
+    }
+
+    /* Highlight hovered link with zoom and clarity */
+    .navLinks .navItem a:hover {
+        transform: none;
+        opacity: 1;
+        filter: none;
+    }
+
 }

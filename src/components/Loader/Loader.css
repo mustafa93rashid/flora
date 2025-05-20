@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #a8d5f7;
+    background: linear-gradient(to right, #cfeaff, #EFF8FF);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -98,7 +98,7 @@
 
 /* Add rotation animation when main button is clicked */
 .main-toggle:active {
-  animation: rotate360 0.6s ease;
+  animation: rotate360 0.3s ease;
 }
 
 /* Keyframes for rotating the toggle button */
