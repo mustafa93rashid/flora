@@ -1,0 +1,39 @@
+/* ==== Main container for the work section ==== */
+.workSection {
+  display: flex;
+  flex-direction: column;
+
+  gap: 120px;
+}
+
+/* ==== Flex container for all work cards ==== */
+.workCardsWrapper {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: stretch;
+    justify-content: center;
+}
+
+/* ==== Responsive: screens up to 1919px ==== */
+@media (max-width: 1919px) {
+  .workSection {
+    gap: 58px;
+  }
+
+  .workCardsWrapper {
+    gap: 43px;
+  }
+}
+
+/* ==== Responsive: screens up to 992px ==== */
+@media (max-width: 992px) {
+  .workSection {
+    gap: 42px;
+  }
+
+  .workCardsWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

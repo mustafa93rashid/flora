@@ -1,0 +1,144 @@
+/* Main Dream Section with background image */
+.dreamSection {
+  background-image: url(/flora/Images/Dream/img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  transform: scale(1);
+  transition: all 0.3s ease;
+
+  /* Centered container for title content */
+  .dreamContentContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 70%;
+  }
+
+  /* Title component  */
+  .title-comp {
+    gap: 100px;
+
+    h2 {
+      font-size: 100px;
+      line-height: 56px;
+    }
+
+    p {
+      font-size: 40px;
+      line-height: 26px;
+    }
+
+    h2,
+    p {
+      color: var(--white-color);
+      text-align: center;
+    }
+  }
+}
+
+.dreamSection:hover .title-comp h2,
+.dreamSection:hover .title-comp p {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Overlay layer on top of background */
+.dreamSection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  pointer-events: none;
+}
+
+/* Responsive adjustments for screens ≤ 1919px */
+@media(max-width: 1919px) {
+  .dreamSection {
+    min-height: 380px;
+
+    .dreamContentContainer {
+      width: 50%;
+    }
+
+    .title-comp {
+      gap: 58px;
+
+      h2 {
+        font-size: 70px;
+      }
+
+      p {
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      h2,
+      p {
+        color: var(--white-color);
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments for screens ≤ 992px*/
+@media(max-width: 992px) {
+  .dreamSection {
+    background-size: 150% 100%;
+
+    .dreamContentContainer {
+      width: 75%;
+    }
+
+    .title-comp {
+      gap: 22px;
+
+      h2 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+      h2,
+      p {
+        color: var(--white-color);
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments for screens ≤ 570px */
+@media(max-width: 570px) {
+  .dreamSection {
+    background-size: 150% 100%;
+
+    .dreamContentContainer {
+      width: 75%;
+    }
+
+    .title-comp {
+      gap: 22px;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

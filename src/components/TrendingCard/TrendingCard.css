@@ -1,0 +1,118 @@
+/* ==== Container for each trending card ==== */
+.trendingCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: var(--white-color);
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px #0000001A;
+  width: 30.1737757%;
+  max-width: 542px;
+  flex: 1;
+
+  img {
+    border-radius: 10px;
+  }
+
+  /* ==== Header: price and title ==== */
+  .cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    span {
+      color: var(--blue01);
+      line-height: 40px;
+    }
+
+    h3 {
+      width: 60%;
+      color: var(--black01);
+      line-height: 40px;
+    }
+  }
+}
+
+/* ==== Location section (icon and text) ==== */
+.cardLocation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 48px;
+
+  p {
+    color: var(--black0105);
+  }
+}
+
+.trendingCardContainer:hover {
+  background-color: #EFF8FF;
+
+}
+
+/* ==== Responsive: screens up to 1919px ==== */
+@media (max-width: 1919px) {
+  .trendingCardContainer {
+    gap: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 30.1737757%;
+
+    img {
+      border-radius: 6px;
+    }
+
+    .cardHeader {
+      span {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 29px;
+      }
+    }
+  }
+
+  .cardLocation {
+    padding-top: 38px;
+    gap: 10.48px;
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+/* ==== Responsive: screens up to 992px ==== */
+@media (max-width: 992px) {
+  .trendingCardContainer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    gap: 14px;
+    padding: 16px;
+    border-radius: 6px;
+
+    .cardHeader {
+      h3 {
+        width: 100%;
+        font-size: 16px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  .cardLocation {
+    padding-top: 72px;
+    gap: 15.45px;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

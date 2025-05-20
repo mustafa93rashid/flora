@@ -1,0 +1,286 @@
+/* ========== Main Navigation Bar Styles ========== */
+.navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    background-color: var(--blue02);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+    /* Logo inside the navbar */
+    .navLogo {
+        width: 80px;
+    }
+
+    /* Navigation links container */
+    .navLinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        justify-content: space-between;
+
+        /* Default style for links */
+        li a {
+            text-decoration: none;
+            color: var(--black01);
+        }
+
+        /* Highlight the active navigation link */
+        li.active a {
+            border-bottom: 2px solid var(--blue01);
+            padding-bottom: 5px;
+        }
+    }
+
+    /* Primary login button for large screens */
+    .loginButton {
+        background-color: var(--blue01);
+        width: 150px;
+        color: var(--white01);
+        padding: 18px 34px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+/* ========== Global Hover Effect on All Navigation Links ========== */
+
+/* Blur and shrink non-hovered items when hovering the list */
+ul:hover .navItem a {
+    transform: scale(1.5);
+    opacity: 0.2;
+    filter: blur(5px);
+}
+
+/* Highlight hovered link with zoom and clarity */
+.navLinks .navItem a:hover {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Gradient animation effect for hover background */
+.navLinks .navItem a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+
+/* Animate the background fill from left to right */
+.navLinks .navItem a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Styles applied when the navbar is scrolled.
+   Fixes the navbar at the top center with padding and border styling. */
+nav.scrolled {
+    /* Compact fixed navbar with white background and border when scrolled */
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    padding: 10px 8.5%;
+    background-color: var(--white-color);
+    border-radius: 50px;
+    z-index: 9999;
+    transition: all 0.5s ease-in-out;
+    border: 1.5px solid #88c4f2;
+}
+
+/* Decorative gradient border effect behind the fixed navbar.
+   Achieved using a pseudo-element positioned behind the navbar. */
+nav.scrolled::before {
+    /* Gradient glow behind the fixed navbar */
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to right, #cfeaff, #EFF8FF);
+    z-index: -1;
+    border-radius: 52px;
+    pointer-events: none;
+}
+
+/* Unlock overflow when menu is open */
+nav.openMenu {
+    overflow: visible;
+}
+
+/* ========== Mobile-Specific Styles ========== */
+
+/* Hide mobile login button by default */
+.loginButtonMobile {
+    display: none;
+}
+
+/* Hamburger toggle button for mobile */
+.toggleButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+
+    img {
+        width: 25.69px;
+    }
+}
+
+/* Hover state for desktop login button */
+.loginButton:hover {
+    background-color: var(--white-color);
+    color: var(--blue01);
+    border: 1.5px solid var(--blue01);
+}
+
+/* ========== Responsive Adjustments for Medium Screens ========== */
+@media (max-width: 1919px) {
+
+    /* Adjust padding and sizes for medium screens */
+    .navBar {
+        padding-top: 17px;
+
+        .navLogo {
+            width: 68px;
+        }
+
+        .navLinks {
+            gap: 30px;
+
+            li a {
+                font-size: 16px;
+            }
+        }
+
+        .loginButton {
+            width: 135px;
+            padding: 13px 20px;
+            border-radius: 6px;
+        }
+    }
+}
+
+/* ========== Responsive Navigation for Small Screens ========== */
+@media (max-width: 992px) {
+
+    /* Utility class to apply white background */
+    .whiteBackground {
+        background-color: var(--white-color);
+    }
+
+    /* Switch navbar layout to mobile format */
+
+    .navBar {
+        width: 100%;
+        padding-top: 30px;
+        position: relative;
+
+        .navLogo {
+            width: 45.92px;
+        }
+    }
+
+    /* Show hamburger menu icon */
+
+    .toggleButton {
+        display: block;
+    }
+
+    /* Mobile menu - hidden by default, revealed on toggle */
+    .navLinks {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        gap: 32px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 999999999;
+        padding-bottom: 50px;
+
+        /* Mobile nav item style with separators */
+        .navItem {
+            padding: 24px 92px 24px 20px;
+            border-top: 1px solid var(--black-color);
+            border-bottom: 1px solid var(--black-color);
+            font-weight: 400;
+
+            a {
+                font-size: 24px !important;
+            }
+        }
+    }
+
+    /* Show menu when toggled open */
+    .responsiveNav {
+        padding-top: 32px;
+        max-height: 100vh;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Hide desktop login button in mobile view */
+    .loginButton {
+        display: none;
+    }
+
+    /* Wrapper for mobile login button with center alignment */
+    .mobileLoginWrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        /* Mobile version of login button */
+
+        .loginButtonMobile {
+            display: block !important;
+            padding: 18px 34px;
+            width: 150px;
+            background-color: var(--blue01);
+            color: var(--white01);
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+    }
+
+    /* Highlight active nav item in mobile view */
+    .navItem.active {
+        background-color: var(--blue03);
+        border: none;
+    }
+
+    /* Hover state for mobile login */
+    .loginButtonMobile:hover {
+        background-color: var(--white-color);
+        color: var(--blue01);
+        border: 1.5px solid var(--blue01);
+    }
+}

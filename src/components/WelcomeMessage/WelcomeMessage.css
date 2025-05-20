@@ -1,0 +1,33 @@
+.welcome-message {
+  position: fixed;
+  bottom: 50px;
+  left: 70px;
+  background-color: var(--blue01);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 99999999;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width:570px) {
+  .welcome-message {
+    width: 150px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,52 @@
+.title-comp {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  h2 {
+    color: var(--black02);
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--blue01);         
+      transform: scale(1.03);       
+    }
+  }
+
+  p {
+    color: var(--black0105);
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1919px) {
+    .title-comp{
+        gap: 10px;
+    }
+
+    .title-comp h2{
+        font-size: 40px;
+        line-height: 56px;
+    }
+    
+    .title-comp p{
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title-comp{
+        gap: 6px;
+    }
+
+    .title-comp h2{
+        font-size: 40px;
+        line-height: 56px;
+    }
+    
+    .title-comp p{
+        font-size: 15px;
+        line-height: 26px;
+    }
+}

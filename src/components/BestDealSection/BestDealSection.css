@@ -1,0 +1,87 @@
+/* Main section for best deals content and tab navigation */
+.bestDealSection {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+/* Container for the tab navigation buttons */
+.tabNavigation {
+    display: flex;
+    gap: 75px;
+
+    /* Individual tab button style */
+    .tabButton {
+        background-color: var(--white-color);
+        border: none;
+        font-weight: 400;
+        color: var(--black01);
+        padding-bottom: 15px;
+    }
+
+    /* Style for the active (selected) tab */
+    .active {
+        border-bottom: 2px solid var(--blue01);
+    }
+}
+
+/* Content area that displays images/cards based on selected tab */
+.tabContentArea {
+    padding-top: 75px;
+    display: flex;
+    gap: 42px;
+    display: flex; /* for large screen greater than 2000px */
+    justify-content: center; /* for large screen greater than 2000px */
+
+}
+
+/* Responsive styles for screens <= 1919px */
+@media (max-width:1919px) {
+    .bestDealSection {
+        /* Reduced vertical spacing for smaller desktops */
+        gap: 58px;
+    }
+
+    .tabNavigation {
+        /* Adjust spacing and font size for tab buttons */
+        gap: 50px;
+
+        .tabButton {
+            font-size: 18px;
+        }
+    }
+
+    .tabContentArea {
+        /* Adjust spacing between cards */
+        padding-top: 50px;
+        gap: 31px;
+    }
+}
+
+/* Responsive styles for tablets and smaller screens <= 992px */
+@media (max-width:992px) {
+    .bestDealSection {
+        /* Reduced spacing for mobile layout */
+        gap: 42px;
+    }
+
+    .tabNavigation {
+        /* Horizontal scroll for overflow of tabs */
+        gap: 30px;
+        width: 100%;
+        overflow-x: auto;
+
+        .tabButton {
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    }
+
+    .tabContentArea {
+        /* Stack cards vertically on small screens */
+        padding-top: 40px;
+        gap: 20px;
+        flex-direction: column;
+    }
+}

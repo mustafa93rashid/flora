@@ -1,0 +1,90 @@
+/* ==== Main container for work card ==== */
+.workCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  padding: 42px 50px 80px 50px;
+  border-radius: 22px;
+  width: 30.995106%;
+  max-width: 522px;
+  flex: 1;
+  transition: all 0.3s ease;
+  transform: translateY(0) scale(1);
+
+  img {
+    width: 56px;
+    height: 56px;
+  }
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    background-color: #ffffffee;
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* ==== Text container: title and description ==== */
+.workCardDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h3 {
+    color: var(--black02);
+  }
+
+  p {
+    color: var(--black0105);
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+
+/* ==== Special style for the second card ==== */
+.workCardContainer:nth-child(2) {
+  background-color: var(--blue01);
+}
+
+/* ==== Text color override for second card ==== */
+.workCardContainer:nth-child(2) .workCardDescription h3,
+.workCardContainer:nth-child(2) .workCardDescription p {
+  color: var(--white-color);
+}
+
+
+/* ==== Responsive: screens up to 1919px ==== */
+@media (max-width: 1919px) {
+  .workCardContainer {
+    gap: 20px;
+    padding: 30px 40px 80px 40px;
+    border-radius: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .workCardDescription {
+    gap: 10px;
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ==== Responsive: screens up to 992px ==== */
+@media (max-width: 992px) {
+  .workCardContainer {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px 17.5px 28px 17.5px;
+    border-radius: 10px;
+  }
+}

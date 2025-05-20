@@ -1,0 +1,112 @@
+/* Container for the social toggle button and social links */
+.social-toggle-wrapper {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  transform: translateX(-80px); 
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+/* Show the toggle button when user scrolls past threshold */
+.social-toggle-show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main toggle button (the round message icon) */
+.main-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--blue01); 
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #1b80ce; 
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+}
+}
+
+/* Wrapper for all social links */
+.social-links {
+  position: relative;
+}
+
+/* Common style for each social media icon */
+.link {
+  font-size: 20px;
+  position: absolute;
+  left: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--blue01);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0); 
+  transition: all 0.3s ease;
+}
+
+/* Show icons with scale animation */
+.social-links.show .link {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Position each social icon vertically */
+.facebook {
+  bottom: 30px;
+}
+
+.instagram {
+  bottom: 90px;
+}
+
+.whatsapp {
+  bottom: 150px;
+}
+
+/* Hover colors for individual social icons */
+.link.facebook:hover {
+  background-color: #1877f2;
+}
+
+.link.instagram:hover {
+  background-color: #e1306c;
+}
+
+.link.whatsapp:hover {
+  background-color: #25d366;
+}
+
+/* Add rotation animation when main button is clicked */
+.main-toggle:active {
+  animation: rotate360 0.6s ease;
+}
+
+/* Keyframes for rotating the toggle button */
+@keyframes rotate360 {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.1) rotate(360deg);
+  }
+}

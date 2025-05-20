@@ -1,0 +1,325 @@
+/* ===== Section Wrapper ===== */
+.allsection {
+    position: relative;
+    background-color: var(--blue02);
+    margin-top: 89px;
+    height: calc(100vh - 100px);
+}
+
+/* ===== Hero Container: Main layout wrapper ===== */
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 120px;
+    gap: 50px;
+    height: 100%;
+
+    .px-150 {
+        padding-right: 0 !important;
+    }
+}
+
+
+/* Hero text content (title and description) */
+.heroTitle {
+    width: 75.9753%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+
+    h1 {
+        width: 70%;
+        font-weight: 800;
+        font-size: 90px;
+        line-height: 120px;
+        letter-spacing: 0%;
+        background: linear-gradient(90deg, #025595, #106db4, #2188d6, #0f171d);
+        background-size: 150% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: moveGradient 7s linear infinite;
+    }
+
+    p {
+        width: 60%;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 42px;
+        letter-spacing: 0;
+        color: var(--black0105);
+        z-index: 9;
+    }
+}
+
+
+/* Hero image positioned in bottom-right */
+.heroImage {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.heroImage img {
+    width: 100%;
+}
+
+/* ===== Label Container: section below the hero with icons/text ===== */
+.labelContainer {
+  display: flex;
+  gap: 60px;
+  background-color: #FFFFFFCC;
+  padding: 40px 90px;
+  border-radius: 28px;
+  backdrop-filter: blur(16px);
+  z-index: 2;
+  width: 1337px;
+  margin-left: 7.8125%;
+  transition: all 0.3s ease; 
+  transform: translateY(0) scale(1); 
+}
+
+.labelContainer:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); 
+  background-color: #ffffffee; 
+  transform: translateY(-5px) scale(1.02); 
+}
+
+
+/* Each individual icon + text item */
+.labelInside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconContainer {
+  background-color: #02559511;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    transition: transform 0.2s ease;
+  }
+}
+
+.iconContainer:hover img {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* Label text */
+.labelDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.labelDesc h3 {
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.22px;
+    color: var(--black01);
+}
+
+.labelDesc p {
+    color: var(--black0105);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.22px;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ===== Media Query: screens up to 1919px ===== */
+@media (max-width: 1919px) {
+    .allsection {
+        height: calc(100vh - 89px);
+        margin-top: 89px;
+    }
+
+    .heroContainer {
+        padding-top: 67px;
+        justify-content: start;
+    }
+
+    /* Hero title adjustments */
+    .heroTitle {
+        width: 66.9753%;
+    }
+
+    .heroTitle h1 {
+        width: 80%;
+
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    .heroTitle p {
+        width: 75%;
+
+        font-size: 24px;
+    }
+
+    /* Label container adjustments */
+    .labelContainer {
+        padding: 30px 70px;
+        border-radius: 24px;
+        margin-left: 5.12445095%;
+        width: 1110px;
+    }
+
+    .labelInside {
+        gap: 28px;
+    }
+
+    .labelDesc {
+        gap: 24px;
+    }
+
+    .labelDesc h3 {
+        font-size: 22px;
+    }
+
+    .labelDesc p {
+        font-size: 22px;
+    }
+}
+
+/* ===== Media Query: screens up to 1440px ===== */
+@media (max-width: 1440px) {
+    .heroTitle {
+        width: 50%;
+    }
+
+    .heroTitle h1 {
+        width: 90%;
+
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .heroTitle p {
+
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .heroImage {
+        width: 90%;
+    }
+
+    .labelContainer {
+        padding: 20px 58px;
+        border-radius: 16px;
+        width: 910px;
+    }
+
+    .labelInside {
+        gap: 15px;
+    }
+
+    .labelDesc {
+        gap: 10px;
+    }
+
+    .labelDesc h3 {
+        font-size: 16px;
+    }
+
+    .labelDesc p {
+        font-size: 16px;
+    }
+}
+
+/* ===== Media Query: screens up to 992px (mobile) ===== */
+@media (max-width: 992px) {
+    .allsection {
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    .heroContainer {
+        margin-top: 0px;
+        height: 100%;
+        min-height: 740px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .heroTitle {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heroTitle h1 {
+        font-size: 35px;
+        line-height: 46px;
+    }
+
+    .heroTitle p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    /* Stack label items vertically for mobile */
+    .labelContainer {
+        flex-direction: column;
+        min-width: 100%;
+        width: 100%;
+        gap: 24px;
+        padding: 39px 20px;
+        border-radius: 0;
+        margin-left: 0;
+    }
+
+    .labelInside {
+        gap: 24px;
+    }
+
+    .labelDesc {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .labelDesc h3 {
+        font-size: 16px;
+    }
+
+    .labelDesc p {
+        font-size: 15px;
+    }
+}

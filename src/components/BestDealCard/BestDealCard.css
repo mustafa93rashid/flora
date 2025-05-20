@@ -1,0 +1,47 @@
+/* Main container for each best deal card */
+.bestDealCard {
+  width: 31.6313214%;
+  position: relative;
+  max-width: 533px;
+
+  img {
+    width: 100%;
+    transition: transform 0.3s ease; 
+  }
+
+  &:hover img {
+    transform: scale(0.95); 
+  }
+}
+
+
+/* Overlay group for badges like "Featured" and "3D" */
+.badgeGroup {
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    span {
+        /* Styling for individual badge labels */
+        border: 1px solid var(--white-color);
+        border-radius: 5px;
+        color: var(--white-color);
+        font-size: 12px;
+        font-weight: 400;
+        padding: 8px 14px;
+        background-color: var(--black0105);
+        font-family: "Inter", sans-serif;
+    }
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width:992px) {
+    .bestDealCard {
+        /* Full width on small screens */
+        width: 100%;
+        max-width: 100%;
+
+    }
+}

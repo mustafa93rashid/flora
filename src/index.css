@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Start Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #025595, #9bc2e0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0669b4, #4085b9);
+}
+
+
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+
+  --white01: #FFFFFF26;
+
+  --black01: #222222;
+  --black0105: #22222280;
+
+  --white01: #F5F5F5;
+
+  --blue01: #025595;
+  --blue02: #EFF8FF;
+  --blue03: #D7E6EA;
+}
+
+/* Layout */
+.px-150 {
+  padding-left: 7.8125%;
+  padding-right: 7.8125%;
+}
+
+.mt-160 {
+  margin-top: 8.33333333%;
+}
+
+
+.fs-18 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* hh */
+.fs-20 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* hh */
+.fs-20-6 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+
+.fs-22 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.fs-22-6 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* hh */
+.fs-24 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.fs-28 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.fs-30 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.fs-40 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.fs-44 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.fs-48 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* hh */
+.fs-58 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0;
+}
+
+.fs-60 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0;
+}
+
+/* hh */
+
+.fs-68 {
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0;
+}
+
+
+@media (max-width: 1919px) {
+  .px-150 {
+    padding-left: 5.12445095%;
+    padding-right: 5.12445095%;
+  }
+
+  .mt-160 {
+    margin-top: 6.88140556%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .px-150 {
+    padding-left: 5.55555556%;
+    padding-right: 5.55555556%;
+  }
+
+  .mt-160 {
+    margin-top: 17.7777778%;
+  }
+}

@@ -1,0 +1,244 @@
+/* footer container: wraps all footer content including top sections and bottom legal area */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    /* Main layout container for all upper footer content */
+    .footerMain {
+        display: flex;
+        gap: 80px;
+
+        /* Branding section: logo and description */
+        .footerBrand {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 40px;
+
+            /* Description text under logo */
+            p {
+                color: var(--black0105);
+
+                &:hover {
+                    color: var(--blue01);
+                }
+            }
+        }
+
+        /* Generic column used for links, contact info, or social icons */
+        .footerColumn {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            /* Title for each footer column */
+            h3 {
+                color: var(--black01);
+                font-weight: 700;
+
+                &:hover {
+                    color: var(--blue01);
+                }
+            }
+
+            /* Optional paragraph inside a column */
+            p {
+                font-weight: 400;
+                color: var(--black01);
+
+                &:hover {
+                    color: var(--blue01);
+                }
+            }
+
+            /* List of links inside a column */
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                /* Link inside list */
+                a {
+                    text-decoration: none;
+                    color: var(--black01);
+                    font-weight: 400;
+
+                    &:hover {
+                        color: var(--blue01);
+                    }
+                }
+            }
+
+            /* Container for social media icons */
+            .socialIcons {
+                display: flex;
+                align-items: center;
+
+                gap: 20px;
+
+                /* Circle background for social icon */
+                a {
+                    background-color: var(--blue01);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.3s ease, background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #128be7;
+                        transform: scale(1.1);
+                    }
+                }
+
+                /* Image inside social icon */
+                img {
+                    width: 48px;
+                    padding: 10px;
+                    transition: transform 0.3s ease;
+
+                    a:hover & {
+                        transform: rotate(5deg);
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* Bottom part of the footer: privacy text and legal links */
+    .footerBottom {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px solid var(--black0105);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        /* Privacy or copyright text */
+        span {
+            color: var(--black01);
+        }
+
+        /* Container for bottom footer links */
+        .footerLinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+
+            /* Individual link */
+            a {
+                text-decoration: none;
+                color: var(--black01);
+            }
+        }
+    }
+}
+
+
+/* Responsive adjustments for large screens (max width 1919px) */
+@media (max-width: 1919px) {
+    footer {
+        gap: 60px;
+
+        /* Adjust spacing between main sections */
+        .footerMain {
+            gap: 60px;
+
+            /* Adjust brand section */
+            .footerBrand {
+                max-width: 450px;
+                gap: 25.92px;
+            }
+
+            /* Adjust column layout */
+            .footerColumn {
+                gap: 20px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                ul {
+                    gap: 16px;
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+
+                .socialIcons {
+                    gap: 16px;
+                }
+            }
+        }
+
+        /* Adjust footer bottom */
+        .footerBottom {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            span {
+                font-size: 14px;
+
+                &:hover {
+                    color: var(--blue01);
+                }
+            }
+
+            .footerLinks {
+                a {
+                    font-size: 14px;
+
+                    &:hover {
+                        color: var(--blue01);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Responsive adjustments for tablets and mobiles (max width 992px) */
+@media (max-width: 992px) {
+    footer {
+
+        /* Stack sections vertically */
+        .footerMain {
+            flex-direction: column;
+            gap: 32px;
+
+            .footerBrand {
+                max-width: 100%;
+                gap: 26px;
+            }
+        }
+
+        /* Adjust footer bottom spacing and font sizes */
+        .footerBottom {
+            padding-top: 27px;
+            padding-bottom: 27px;
+
+            span {
+                font-size: 16px;
+            }
+
+            .footerLinks {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
