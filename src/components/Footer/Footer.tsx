@@ -46,9 +46,9 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
           <div className="socialIcons">
             {data.socialLinks.map((link, index) => (
               <a key={index} href={link.path}>
-                <div>
+                <span>
                   <img src={link.name} alt="social icon" />
-                </div>
+                </span>
               </a>
             ))}
           </div>

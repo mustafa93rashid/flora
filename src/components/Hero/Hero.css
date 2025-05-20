@@ -2,8 +2,8 @@
 .allsection {
     position: relative;
     background-color: var(--blue02);
-    margin-top: 89px;
-    height: calc(100vh - 100px);
+    padding-top: 89px;
+    height: 100vh;
 }
 
 /* ===== Hero Container: Main layout wrapper ===== */
@@ -58,7 +58,7 @@
 /* Hero image positioned in bottom-right */
 .heroImage {
     position: absolute;
-    width: 70%;
+    width: 80%;
     bottom: 0;
     right: 0;
     z-index: 1;
@@ -161,11 +161,6 @@
 
 /* ===== Media Query: screens up to 1919px ===== */
 @media (max-width: 1919px) {
-    .allsection {
-        height: calc(100vh - 89px);
-        margin-top: 89px;
-    }
-
     .heroContainer {
         padding-top: 67px;
         justify-content: start;
@@ -265,11 +260,10 @@
 @media (max-width: 992px) {
     .allsection {
         height: 100%;
-        margin-top: 0px;
+        padding-top: 0;
     }
 
     .heroContainer {
-        margin-top: 0px;
         height: 100%;
         min-height: 740px;
         display: flex;
