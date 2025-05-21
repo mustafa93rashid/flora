@@ -1,6 +1,6 @@
 
 import type { TitleData } from "../../types/Title";
-import TitleComponent from '../TitleComponent/TitleComponent';
+import TitleComponent from '../../components/TitleComponent/TitleComponent';
 import './DreamSection.css';
 
 interface DreamSectionProps {

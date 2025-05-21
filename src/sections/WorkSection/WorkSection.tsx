@@ -1,7 +1,7 @@
 import type { TitleData } from '../../types/Title';
 import type { WorkItem } from '../../types/Work';
-import TitleComponent from '../TitleComponent/TitleComponent';
-import WorkCard from '../WorkCard/WorkCard';
+import TitleComponent from '../../components/TitleComponent/TitleComponent';
+import WorkCard from '../../components/WorkCard/WorkCard';
 import './workSection.css';
 
 interface WorkSectionProps {

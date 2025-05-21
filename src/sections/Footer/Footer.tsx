@@ -20,17 +20,17 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
         {/* Brand section: displays logo and brand description */}
         <div className="footerBrand">
           <img src={data.brand.logo} alt="Logo" />
-          <p className="fs-20">{data.brand.description}</p>
+          <p className="fs-22">{data.brand.description}</p>
         </div>
 
         {/* Dynamic footer sections: each section contains a title and a list of links */}
         {data.sections.map((section, index) => (
           <div key={index} className="footerColumn">
-            <h3 className="fs-24">{section.title}</h3>
+            <h3 className="fs-28">{section.title}</h3>
             <ul>
               {section.links.map((link, idx) => (
                 <li key={idx}>
-                  <a className="fs-20" href={link.path}>{link.name}</a>
+                  <a className="fs-24" href={link.path}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -39,8 +39,8 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
 
         {/* Location/contact section with title, description, and social media links */}
         <div className="footerColumn">
-          <h3 className="fs-24">{data.location.title}</h3>
-          <p className="fs-20">{data.location.description}</p>
+          <h3 className="fs-28">{data.location.title}</h3>
+          <p className="fs-24">{data.location.description}</p>
 
           {/* Social media icons section */}
           <div className="socialIcons">
@@ -58,12 +58,12 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
       {/* Bottom section of the footer containing privacy notice and legal links */}
       <div className="footerBottom">
         {/* Text for copyright or privacy */}
-        <span className="fs-18">{data.privacy}</span>
+        <span className="fs-24">{data.privacy}</span>
 
         {/* List of privacy or legal related links */}
         <div className="footerLinks">
           {data.privacyLink.map((item: LinkItem, index) => (
-            <a className="fs-18" key={index} href={item.path}>{item.name}</a>
+            <a className="fs-24" key={index} href={item.path}>{item.name}</a>
           ))}
         </div>
       </div>

@@ -9,11 +9,8 @@
 .trendingCardsWrapper {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1695px;
   gap: 30px;
   width: 100%;
-  align-items: stretch;
-  margin: 0 auto;
 }
 
 /* ==== Responsive: screens up to 1919px ==== */

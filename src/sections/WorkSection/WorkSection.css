@@ -2,7 +2,6 @@
 .workSection {
   display: flex;
   flex-direction: column;
-
   gap: 120px;
 }
 
@@ -10,9 +9,7 @@
 .workCardsWrapper {
   display: flex;
   gap: 60px;
-  flex-wrap: wrap;
-  align-items: stretch;
-    justify-content: center;
+  justify-content: space-between;   /* for large screen larger than 2000px */
 }
 
 /* ==== Responsive: screens up to 1919px ==== */

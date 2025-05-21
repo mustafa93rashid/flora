@@ -12,9 +12,7 @@ const Hero: React.FC<HeroProps> = ({ data, herodata }) => {
     // Wrapper section for the entire hero component
     <section className="allsection"  >
       {/* Hero image (positioned as background or visual element) */}
-      <div className="heroImage">
-        <img src="/flora/Images/Hero/hero.png" alt="hero image" />
-      </div>
+        <img className="heroImage" src="/flora/Images/Hero/hero.png" alt="hero image" />
       {/* Top part of the hero with title and image */}
       <div className="heroContainer">
 

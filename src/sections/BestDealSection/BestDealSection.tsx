@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import type { BestDealsTabItem } from '../../types/BestDealsTabItem';
 import type { TitleData } from "../../types/Title";
-import BestDealCard from '../BestDealCard/BestDealCard';
-import TitleComponent from '../TitleComponent/TitleComponent';
+import BestDealCard from '../../components/BestDealCard/BestDealCard';
+import TitleComponent from '../../components/TitleComponent/TitleComponent';
 import './BestDealSection.css';
 
 interface BestDealSectionProps {

@@ -7,6 +7,7 @@ footer {
     /* Main layout container for all upper footer content */
     .footerMain {
         display: flex;
+        justify-content: space-between;
         gap: 80px;
 
         /* Branding section: logo and description */
@@ -151,6 +152,7 @@ footer {
         /* Adjust spacing between main sections */
         .footerMain {
             gap: 60px;
+            justify-content: start;
 
             /* Adjust brand section */
             .footerBrand {
@@ -188,6 +190,7 @@ footer {
         .footerBottom {
             padding-top: 24px;
             padding-bottom: 24px;
+
             span {
                 font-size: 14px;
 

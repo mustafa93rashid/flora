@@ -1,7 +1,7 @@
 import type { TitleData } from '../../types/Title';
 import type { Trending } from '../../types/Trending';
-import TitleComponent from '../TitleComponent/TitleComponent';
-import TrendingCard from '../TrendingCard/TrendingCard';
+import TitleComponent from '../../components/TitleComponent/TitleComponent';
+import TrendingCard from '../../components/TrendingCard/TrendingCard';
 import './trendingSection.css';
 
 interface TrendingSectionProps {

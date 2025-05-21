@@ -15,6 +15,12 @@
     border-radius: 10px;
   }
 
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    background-color: #ffffffee;
+    transform: translateY(-5px) scale(1.02);
+  }
+
   /* ==== Header: price and title ==== */
   .cardHeader {
     display: flex;
@@ -26,10 +32,14 @@
       line-height: 40px;
     }
 
-    h3 {
+    h3 { 
       width: 60%;
       color: var(--black01);
       line-height: 40px;
+
+      &:hover {
+        color: var(--blue01);
+      }
     }
   }
 }
@@ -43,6 +53,11 @@
 
   p {
     color: var(--black0105);
+
+    &:hover {
+      color: var(--blue01);
+    }
+
   }
 }
 

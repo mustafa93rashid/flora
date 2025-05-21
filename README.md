@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+🌿 Flora Real Estate Website
+Flora is a modern real estate website tailored for showcasing residential properties with an elegant and interactive user experience. The project demonstrates clean UI/UX design principles and advanced frontend development techniques using React + TypeScript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+✨ Features
+1. Responsive Interactive Navbar
+A dynamic navigation bar that changes its style and background to a blue gradient when the user scrolls beyond 50px.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensures clear user orientation and smooth UI transition.
 
-## Expanding the ESLint configuration
+2. Full-Screen Hero Section
+A professional Hero component that spans the full height of the viewport.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Designed to capture the user's attention instantly with a compelling headline and imagery.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Welcome Message Popup
+Displays a custom welcoming message on page load for 10 seconds, offering a personalized touch to first-time visitors.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. Social Media Floating Button
+A toggle button to reveal social media links in a floating, animated panel for quick access.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Styled with circular icons and hover effects for modern aesthetics.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+5. Scroll-to-Top Button
+Adds a convenient scroll-to-top button that appears when the user scrolls down the page.
+
+Smooth scroll effect for better user navigation.
+
+6. Loading Screen
+A professional loader animation is displayed while the site assets are being prepared.
+
+Enhances perceived performance and user trust during initial load.
+
+7. Dynamic Sidebar
+A collapsible sidebar that adjusts based on user interaction.
+
+Useful for menu navigation, filtering options, or featured listings.
+
+
+
+🛠️ Tech Stack
+Framework: React + TypeScript
+
+Styling: CSS Variables
+
+Animations: Framer Motion / AOS
+
+Utilities: Vite, ESLint, Prettier
