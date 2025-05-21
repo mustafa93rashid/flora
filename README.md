@@ -1,48 +1,70 @@
-🌿 Flora Real Estate Website
-Flora is a modern real estate website tailored for showcasing residential properties with an elegant and interactive user experience. The project demonstrates clean UI/UX design principles and advanced frontend development techniques using React + TypeScript.
+# 🌿 Flora Real Estate Website
+
+**Flora** is a modern, feature-rich real estate platform focused on showcasing residential properties with a premium, elegant, and interactive user experience. Built using **React + TypeScript**, the project emphasizes performance, design quality, and smooth user interaction.
+
+---
+
+## ✨ Features
+
+### 🌐 Responsive Interactive Navbar
+- Adapts dynamically as the user scrolls past 50px.
+- Transforms into a blue gradient with a compact design.
+- Ensures consistent navigation and branding.
+
+### 🏠 Full-Screen Hero Section
+- Covers the full viewport height.
+- Delivers a powerful headline and clean visual layout.
+- Designed to instantly capture visitor attention.
+
+### 👋 Welcome Message Popup
+- Displays a localized greeting based on the time of day.
+- Automatically disappears after 10 seconds.
+- Adds a personal and warm experience for users.
+
+### 📱 Floating Social Media Button
+- Toggleable floating button reveals animated social icons.
+- Circular design with hover effects for modern interaction.
+- Provides quick access to social platforms.
+
+### ⬆️ Scroll-to-Top Button
+- Appears after user scrolls down.
+- Smooth scrolling for intuitive navigation.
+
+### 🔄 Professional Loading Screen
+- Animated loader displayed while site assets are loading.
+- AOS animations are delayed until the loader completes.
+- Enhances performance perception and polish.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: React + TypeScript
+- **Build Tool**: Vite
+- **Styling**: CSS Variables, SCSS
+- **Animations**: AOS, Framer Motion
+- **Linting/Formatting**: ESLint, Prettier
+- **Deployment**: GitHub Pages
+
+---
+
+## 📁 Folder Structure
+
+src/
+├── components/ # UI Components (Navbar, Hero, Loader, etc.)
+├── pages/ # Full pages (e.g., HomePage)
+├── data/ # Static JSON or TS data
+├── styles/ # Global styles and variables
+├── assets/ # Images and icons
+├── types/ # TypeScript interfaces and types
+└── App.tsx # Main application component
 
 
-✨ Features
-1. Responsive Interactive Navbar
-A dynamic navigation bar that changes its style and background to a blue gradient when the user scrolls beyond 50px.
+---
 
-Ensures clear user orientation and smooth UI transition.
+## 📬 Contact
 
-2. Full-Screen Hero Section
-A professional Hero component that spans the full height of the viewport.
+For collaboration, inquiries, or freelance work, feel free to reach out:
 
-Designed to capture the user's attention instantly with a compelling headline and imagery.
-
-3. Welcome Message Popup
-Displays a custom welcoming message on page load for 10 seconds, offering a personalized touch to first-time visitors.
-
-4. Social Media Floating Button
-A toggle button to reveal social media links in a floating, animated panel for quick access.
-
-Styled with circular icons and hover effects for modern aesthetics.
-
-5. Scroll-to-Top Button
-Adds a convenient scroll-to-top button that appears when the user scrolls down the page.
-
-Smooth scroll effect for better user navigation.
-
-6. Loading Screen
-A professional loader animation is displayed while the site assets are being prepared.
-
-Enhances perceived performance and user trust during initial load.
-
-7. Dynamic Sidebar
-A collapsible sidebar that adjusts based on user interaction.
-
-Useful for menu navigation, filtering options, or featured listings.
-
-
-
-🛠️ Tech Stack
-Framework: React + TypeScript
-
-Styling: CSS Variables
-
-Animations: Framer Motion / AOS
-
-Utilities: Vite, ESLint, Prettier
+- 📧 Email: [mustafa.rashid.abbas@gmail.com](mailto:mustafa.rashid.abbas@gmail.com)  
+- 📱 WhatsApp: [+964 771 609 1119](https://wa.me/9647716091119)

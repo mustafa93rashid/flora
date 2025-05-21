@@ -1,0 +1,11 @@
+/* Set the default cursor for the entire page */
+body {
+    cursor: url('/Mouse-default.png'), default;
+}
+
+/* Apply a specific cursor style for clickable elements */
+button,
+a,
+i {
+    cursor: url('/Mouse-Pointer.png'), auto !important;
+}

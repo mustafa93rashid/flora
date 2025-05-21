@@ -190,7 +190,6 @@ nav.openMenu {
     }
 
     /* Switch navbar layout to mobile format */
-
     .navBar {
         width: 100%;
         padding-top: 30px;
@@ -203,7 +202,6 @@ nav.openMenu {
     }
 
     /* Show hamburger menu icon */
-
     .toggleButton {
         display: block;
     }
@@ -258,7 +256,6 @@ nav.openMenu {
         margin-top: 40px;
 
         /* Mobile version of login button */
-
         .loginButtonMobile {
             display: block !important;
             padding: 18px 34px;
@@ -296,5 +293,4 @@ nav.openMenu {
         opacity: 1;
         filter: none;
     }
-
 }

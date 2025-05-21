@@ -27,7 +27,7 @@ const WelcomeMessage: React.FC = () => {
   }, []);
 
   return (
-    <div className={`welcome-message ${visible ? 'visible' : 'hidden'}`}>
+    <div className={`welcome-message ${visible ? 'visible' : 'hidden'}`} >
       {message}
     </div>
   );

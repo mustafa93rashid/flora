@@ -12,18 +12,10 @@ import { HeroData } from "../data/HeroData"
 import { BestDealTitle, DreamTitle, HeroTitle, TrendingTitle, WorksTitle } from "../data/TitleSectionsData"
 import { TrendingData } from "../data/TrendingData"
 import { footerData } from './../data/FooterData'
-import ScrollToTop from "../components/ScrollToTop/ScrollToTop"
-import HandleLoadingComponent from "../components/HandleLoadingComponent/HandleLoadingComponent"
-import SocialToggle from "../components/SocialToggle/SocialToggle"
-import WelcomeMessage from "../components/WelcomeMessage/WelcomeMessage"
 
 const Home = () => {
   return (
     <>
-      <WelcomeMessage />
-      <HandleLoadingComponent />
-      <ScrollToTop />
-      <SocialToggle />
       <NavBarComponent data={NavBarData} />
       <Hero data={HeroTitle} herodata={HeroData} />
       <WorkSection dataTitle={WorksTitle} dataCards={HowItWorksData} />
@@ -31,7 +23,6 @@ const Home = () => {
       <TrendingSection dataTitle={TrendingTitle} dataCards={TrendingData} />
       <BestDealSection dataTitle={BestDealTitle} dataCards={BestDealsTabData} />
       <Footer data={footerData} />
-
     </>
   )
 }

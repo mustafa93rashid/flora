@@ -17,8 +17,9 @@
         font-weight: 400;
         color: var(--black01);
         padding-bottom: 15px;
-        &:hover{
-                    color: var(--blue01);
+
+        &:hover {
+            color: var(--blue01);
 
         }
     }
@@ -34,8 +35,8 @@
     padding-top: 75px;
     display: flex;
     gap: 42px;
-    display: flex;
-    justify-content: space-between; /* for large screen larger than 2000px */
+    justify-content: space-between;
+    /* for large screen larger than 2000px */
 }
 
 /* Responsive styles for screens <= 1919px */

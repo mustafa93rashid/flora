@@ -3,18 +3,19 @@ import Loader from "../Loader/Loader";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const HandleLoadingComponent: React.FC = () => {
+const HandleLoadingComponent: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const handleLoad = (): void => {
       setTimeout(() => {
+        setLoading(false);    
+
         AOS.init({
           once: true,
-          duration: 3000,
+          duration: 1000, 
         });
         AOS.refresh();
-        setLoading(false);
       }, 2700);
     };
 
@@ -28,7 +29,7 @@ const HandleLoadingComponent: React.FC = () => {
 
   return (
     <>
-      {loading ? <Loader /> : <div></div>}
+      {loading ? <Loader /> : <div>{children}</div>}
     </>
   );
 };

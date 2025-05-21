@@ -12,7 +12,8 @@ const Hero: React.FC<HeroProps> = ({ data, herodata }) => {
     // Wrapper section for the entire hero component
     <section className="allsection"  >
       {/* Hero image (positioned as background or visual element) */}
-        <img className="heroImage" src="/flora/Images/Hero/hero.png" alt="hero image" />
+      <img className="heroImage" src="/flora/Images/Hero/hero.png" alt="hero image" data-aos="fade-up"
+        data-aos-duration="3000" />
       {/* Top part of the hero with title and image */}
       <div className="heroContainer">
 
@@ -22,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ data, herodata }) => {
           <p>{data.desc}</p>
         </div>
         {/* Bottom part with icon-label items mapped from herodata */}
-        <div className="labelContainer">
+        <div className="labelContainer" data-aos="flip-up" >
           {herodata.map((item, index) => (
             <div className="labelInside" key={index}>
               <div className="iconContainer">
